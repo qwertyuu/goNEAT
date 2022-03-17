@@ -1,10 +1,11 @@
 package utils
 
 import (
+	"os"
+
 	"github.com/pkg/errors"
 	"github.com/yaricom/goNEAT/v2/neat"
 	"github.com/yaricom/goNEAT/v2/neat/genetics"
-	"os"
 )
 
 func CreateOutputDir(outDirPath string) error {
@@ -14,6 +15,7 @@ func CreateOutputDir(outDirPath string) error {
 		if err = os.RemoveAll(outDirPath); err != nil {
 			return err
 		}
+		return err
 	}
 	// create output dir
 	return os.MkdirAll(outDirPath, os.ModePerm)
