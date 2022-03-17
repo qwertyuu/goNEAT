@@ -469,7 +469,7 @@ func (g *Genome) Genesis(netId int) (*network.Network, error) {
 }
 
 // Duplicate this Genome to create a new one with the specified id
-func (g *Genome) duplicate(newId int) (*Genome, error) {
+func (g *Genome) Duplicate(newId int) (*Genome, error) {
 
 	// Duplicate the traits
 	traitsDup := make([]*neat.Trait, len(g.Traits))

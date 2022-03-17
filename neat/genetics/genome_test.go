@@ -133,7 +133,7 @@ func TestGenome_GenesisModular(t *testing.T) {
 func TestGenome_Duplicate(t *testing.T) {
 	gnome := buildTestGenome(1)
 
-	newGnome, err := gnome.duplicate(2)
+	newGnome, err := gnome.Duplicate(2)
 	require.NoError(t, err, "failed to duplicate")
 	assert.Equal(t, 2, newGnome.Id)
 	assert.Equal(t, len(gnome.Traits), len(newGnome.Traits), "wrong traits number")
@@ -148,7 +148,7 @@ func TestGenome_Duplicate(t *testing.T) {
 func TestGenome_DuplicateModular(t *testing.T) {
 	gnome := buildTestModularGenome(1)
 
-	newGnome, err := gnome.duplicate(2)
+	newGnome, err := gnome.Duplicate(2)
 	require.NoError(t, err, "failed to duplicate")
 	assert.Equal(t, 2, newGnome.Id)
 	assert.Equal(t, len(gnome.Traits), len(newGnome.Traits), "wrong traits number")
